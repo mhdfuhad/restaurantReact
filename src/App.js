@@ -22,7 +22,11 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`/restaurants?borough=${searchString}`);
+    history.push(
+      `/restaurants?borough=${
+        searchString.charAt(0).toUpperCase() + searchString.slice(1)
+      }`
+    );
     setSearchString("");
   };
 
